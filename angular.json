@@ -28,7 +28,22 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+              //Tema Fixo
+              //"node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              //Tema dinamico              
+              {
+                "input": "src/themes/saga-blue.scss",
+                "bundleName": "saga-blue",
+                "inject": false
+              },
+              {
+                "input": "src/themes/arya-green.scss",
+                "bundleName": "arya-green",
+                "inject": false
+              }
             ],
             "scripts": []
           },

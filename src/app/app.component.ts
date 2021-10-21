@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prime';
+  saga = true;
+  constructor(private themeService: ThemeService)
+  {
+
+  }
+
+  changeTheme()
+  {
+    this.saga=!this.saga;
+    if(this.saga)
+      this.themeService.change('saga-blue');
+    else
+    this.themeService.change('arya-green');
+  }
 }
